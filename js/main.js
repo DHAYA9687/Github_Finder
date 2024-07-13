@@ -10,7 +10,8 @@ $(document).ready(function () {
   $("#search").on("keyup", function (e) {
     var username = e.target.value;
     console.log(username);
-
+    //add personal token later when use this
+    const token = "xxxxxxxxx";
     $.ajax({
       url: "https://api.github.com/users/" + username,
       headers: {
