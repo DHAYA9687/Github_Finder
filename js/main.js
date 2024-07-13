@@ -10,7 +10,7 @@ $(document).ready(function () {
   $("#search").on("keyup", function (e) {
     var username = e.target.value;
     console.log(username);
-    const token = "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 ";
+
     $.ajax({
       url: "https://api.github.com/users/" + username,
       headers: {
