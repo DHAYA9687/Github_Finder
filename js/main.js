@@ -11,19 +11,25 @@ $(document).ready(function () {
     var username = e.target.value;
     console.log(username);
     //add personal token later when use this
-    const token = "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 ";
+    //const token = "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 ";
     $.ajax({
       url: "https://api.github.com/users/" + username,
-      headers: {
-        Authorization: "token " + token,
+      // headers: {
+      //   Authorization: "token " + token,
+      // },
+      data: {
+        client_id: "Ov23liclHtiLd3o5w7Tt",
+        client_secret: "3c25001260f05cbe3691db09cd07044e1730d6af",
       },
     }).done(function (user) {
       $.ajax({
         url: "https://api.github.com/users/" + username + "/repos",
-        headers: {
-          Authorization: "token " + token,
-        },
+        // headers: {
+        //   Authorization: "token " + token,
+        // },
         data: {
+          client_id: "Ov23liclHtiLd3o5w7Tt",
+          client_secret: "3c25001260f05cbe3691db09cd07044e1730d6af",
           sort: "created: asc",
           per_page: 5,
         },
