@@ -11,7 +11,7 @@ $(document).ready(function () {
     var username = e.target.value;
     console.log(username);
     //add personal token later when use this
-    const token = "xxxxxxxxx";
+    const token = "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 ";
     $.ajax({
       url: "https://api.github.com/users/" + username,
       headers: {
